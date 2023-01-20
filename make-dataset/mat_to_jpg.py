@@ -5,12 +5,12 @@ import os
 import scipy.io as scio
 from PIL import Image
 
-
+# 帮助训练UNET模型，训练数据只有一个mask
 def get_all_files():
     path = os.path.abspath('.')
     # print(path)
     path1 = path + '/groundTruth'
-    return os.listdir(path1)  # 打印IELTS文件夹内的文件名称
+    return os.listdir(path1)  # 打印文件夹内的文件名称
 
 
 def mat_to_jpg(files_list):
